@@ -2,7 +2,8 @@ package crrojasp.apirest.cassandra.controller;
 
 import java.util.List;
 import java.util.Map;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import crrojasp.apirest.cassandra.repository.*;
 import crrojasp.apirest.cassandra.model.*;
 import java.util.UUID;
-
+import org.springframework.beans.factory.annotation.Value;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")

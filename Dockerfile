@@ -5,10 +5,7 @@ FROM openjdk:21
 WORKDIR /usr/src/app
 
 # al directorio de trabajo en el contenedor
-COPY target/cassandra-0.0.1-SNAPSHOT.jar /usr/src/app/aplication.jar
-
-# Establecer una variable de entorno para el punto de contacto de Cassandra
-ENV CASSANDRA_CONTACT_POINTS=localhost
+COPY target/cassandra-0.0.1-SNAPSHOT.jar /usr/src/app/application.jar
 
 # Especificar el comando para ejecutar tu aplicación, incluyendo la variable de entorno
-CMD ["java", "-jar", "/usr/src/app/application.jar", "--spring.data.cassandra.contact-points=${CASSANDRA_CONTACT_POINTS}"]
+CMD ["java", "-jar", "/usr/src/app/application.jar"]
